@@ -5,26 +5,29 @@ f1.weapon = new Weapon();
 f1.hp = 100;
 f2.hp = 75;
 
-bool alive = true;
 
-while (alive = true)
+while (f2.GetAlive())
 {
 
 
     int damage = f1.weapon.Attack();
 
-    f2.hp -= damage;
+    if (f2.hp >= damage)
+    {
+        f2.hp -= damage;
+    }
+    else
+    {
+        f2.hp = 0;
+    }
 
 
     Console.WriteLine(f1.weapon.name);
     Console.WriteLine(f2.hp);
 
 
-    Console.ReadLine();
+    f2.Death();
 
-    if (f1.hp <= 0)
-    {
-        alive = false;
-    }
+    Console.ReadLine();
 
 }
