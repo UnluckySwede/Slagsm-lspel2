@@ -6,7 +6,7 @@ f1.hp = 100;
 f2.hp = 75;
 
 
-while (f2.GetAlive())
+while (f2.GetAlive() && f1.GetAlive())
 {
 
 
