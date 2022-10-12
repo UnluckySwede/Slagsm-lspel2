@@ -3,7 +3,7 @@ using System;
 
 public class Fighter
 {
-    public string name = "Kyle";
+    public string name;
 
     public int hp = 1;
 
