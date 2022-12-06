@@ -58,6 +58,13 @@ while (f2.GetAlive() && f1.GetAlive())
 
     }
 
+    Console.WriteLine("Choose your weapon");
+    Console.WriteLine("1. Sword");
+    Console.WriteLine("2. Pike");
+    Console.WriteLine("3. Axe");
+
+
+
     int damage = f1.weapon.Attack();
 
     if (f2.hp >= damage)
