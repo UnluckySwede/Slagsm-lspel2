@@ -13,4 +13,30 @@ public class Weapon
         return generator.Next(minDamage, maxDamage);
         return generator.Next(accuracy, 100);
     }
+    public void Choice()
+    {
+        Console.WriteLine("Choose your weapon");
+        Console.WriteLine("1. Sword");
+        Console.WriteLine("2. Pike");
+        Console.WriteLine("3. Axe");
+        private string weaponChoice = "Bruh";
+    weaponChoice = Console.ReadLine();
+
+        if (weaponChoice == "1")
+        {
+            return weaponChoice;
+        }
+
+if (weaponChoice == "2")
+{
+    Weapon weapon = new Pike();
+
+}
+
+if (weaponChoice == "3")
+{
+    Weapon weapon = new Axe();
+
+}
+    }
 }
