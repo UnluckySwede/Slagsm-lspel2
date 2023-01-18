@@ -5,7 +5,8 @@ public class Axe : Weapon
     public Axe()
     {
         name = "axe";
-        accuracy = 50;
+        minAccuracy = 50;
+        maxAccuracy = 100;
         minDamage = 20;
         maxDamage = 30;
     }

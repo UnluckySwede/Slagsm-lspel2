@@ -5,7 +5,8 @@ public class Pike : Weapon
     public Pike()
     {
         name = "pike";
-        accuracy = 65;
+        minAccuracy = 65;
+        maxAccuracy = 100;
         minDamage = 15;
         maxDamage = 25;
     }
