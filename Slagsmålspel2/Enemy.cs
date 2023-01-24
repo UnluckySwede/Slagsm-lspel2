@@ -4,11 +4,14 @@ public class Enemy
 {
     public string name;
 
-    public int hp = 1;
+    public int hp;
+
 
     public Weapon weapon;
 
     private bool isAlive = true;
+
+    private Random generator = new Random();
 
     public bool GetAlive()
     {
@@ -23,7 +26,12 @@ public class Enemy
         }
     }
 
-    public void Difficulty()
+    public int agility() // int som bestämmer hur många % av attack damage kommer igenom till hp.
+    {
+        return generator.Next(10, 100);
+    }
+
+    public void Difficulty() // metod som selectar vilken mängd hp som fienden ges.
     {
         Console.WriteLine("Choose your difficulty.");
         Console.WriteLine("");
