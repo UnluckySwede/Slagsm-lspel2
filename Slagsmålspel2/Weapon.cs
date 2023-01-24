@@ -23,6 +23,7 @@ public class Weapon
         Console.WriteLine("1. Sword");
         Console.WriteLine("2. Pike");
         Console.WriteLine("3. Axe");
+        Console.WriteLine("4. Fists");
         string weaponChoice;
         Weapon weapon;
         weaponChoice = Console.ReadLine();
@@ -37,8 +38,11 @@ public class Weapon
             case ("3"):
                 weapon = new Axe();
                 break;
+            case ("4"):
+                weapon = new Fists();
+                break;
             default:
-                Console.WriteLine("choose 1-3");
+                Console.WriteLine("choose 1-4");
                 weapon = Choice();
                 break;
         }
