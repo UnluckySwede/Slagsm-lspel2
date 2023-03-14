@@ -7,8 +7,7 @@ public class Fists : Weapon
         name = "fists";
         minAccuracy = 75;
         maxAccuracy = 100;
-        minDamage = 7;
-        maxDamage = 15;
+        damage = 15;
 
     }
 }

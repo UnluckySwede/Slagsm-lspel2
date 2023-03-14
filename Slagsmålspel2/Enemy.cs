@@ -1,35 +1,8 @@
 using System;
 
-public class Enemy
+public class Enemy : Fighter
 {
-    public string name;
 
-    public int hp;
-
-
-    public Weapon weapon;
-
-    private bool isAlive = true;
-
-    private Random generator = new Random();
-
-    public bool GetAlive()
-    {
-        return isAlive;
-    }
-
-    public void Death()
-    {
-        if (hp <= 0)
-        {
-            isAlive = false;
-        }
-    }
-
-    public int agility() // int som bestämmer hur många % av attack damage kommer igenom till hp.
-    {
-        return generator.Next(10, 100);
-    }
 
     public void Difficulty() // metod som selectar vilken mängd hp som fienden ges.
     {

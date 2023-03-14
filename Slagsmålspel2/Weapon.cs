@@ -2,21 +2,26 @@ using System;
 
 public class Weapon
 {
-    public int minDamage { get; set; }
-    public int maxDamage { get; set; }
+    public int damage { get; set; }
     public int minAccuracy { get; set; }
     public int maxAccuracy { get; set; }
     public string name { get; set; }
     private Random generator = new Random();
 
-    public int AttackDmg()
-    {
-        return generator.Next(minDamage, maxDamage);
-    }
     public int AttackAcc()
     {
         return generator.Next(minAccuracy, maxAccuracy);
     }
+
+    public int AttackDmg(Enemy target)
+    {
+
+        if (AttackAcc() - target.Agility() < 0)
+        {
+            damage* AttackAcc() = damage;
+        }
+    }
+
     public static Weapon Choice()
     {
         Console.WriteLine("Choose your weapon");

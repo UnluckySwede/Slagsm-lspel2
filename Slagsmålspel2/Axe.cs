@@ -7,7 +7,6 @@ public class Axe : Weapon
         name = "axe";
         minAccuracy = 50;
         maxAccuracy = 100;
-        minDamage = 20;
-        maxDamage = 30;
+        damage = 30;
     }
 }
