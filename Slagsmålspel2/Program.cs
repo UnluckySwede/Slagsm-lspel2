@@ -19,9 +19,10 @@ while (e1.GetAlive() && f1.GetAlive())
         Console.WriteLine("Do you wish to attack? (y/n)");
         if ("y" == Console.ReadLine())
         {
-            if (e1.hp >= f1.weapon.AttackDmg())
+            int strike = f1.weapon.AttackDmg(e1);
+            if (e1.hp >= strike)
             {
-                e1.hp -= f1.weapon.AttackDmg();
+                e1.hp -= strike;
             }
             else
             {
@@ -34,8 +35,9 @@ while (e1.GetAlive() && f1.GetAlive())
         // int.TryParse(f1.weapon.AttackAcc, out accuracy);
         Console.WriteLine($"Enemy hp remaining:{e1.hp}");
         Console.WriteLine($"Weapon:{f1.weapon.name}");
+        Console.WriteLine($"Enemy agility:{e1.Agility()}");
         Console.WriteLine($"Weapon accuracy:{f1.weapon.AttackAcc()}");
-        Console.WriteLine($"Weapon max damage:{f1.weapon.damage}");
+        Console.WriteLine($"Weapon damage:{f1.weapon.damage}");
         Console.ReadLine();
         e1.Death();
     }

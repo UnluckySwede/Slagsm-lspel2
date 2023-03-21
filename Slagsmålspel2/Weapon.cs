@@ -15,10 +15,17 @@ public class Weapon
 
     public int AttackDmg(Enemy target)
     {
-
-        if (AttackAcc() - target.Agility() < 0)
+        int acc = AttackAcc();
+        int agi = target.Agility();
+        if (acc <= agi)
         {
-            damage* AttackAcc() = damage;
+            damage = 0;
+            return 0;
+        }
+        else
+        {
+            damage = damage * (acc / 100);
+            return damage;
         }
     }
 

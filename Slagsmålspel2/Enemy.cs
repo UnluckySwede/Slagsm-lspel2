@@ -39,7 +39,7 @@ public class Enemy : Fighter
             if (difficulty != "1" && difficulty != "2" && difficulty != "3" && difficulty != "4")
             {
                 Console.WriteLine("Please type 1, 2, 3 or 4 and choose a difficulty.");
-                difficulty = Console.ReadLine().ToLower();
+                difficulty = "placeholder";
             }
 
         }
