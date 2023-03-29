@@ -3,7 +3,7 @@ using System;
 
 public class Fighter
 {
-    public string name;
+    public string name = "unchosen";
 
     public int hp;
 
@@ -13,7 +13,7 @@ public class Fighter
 
     public int Agility() // int som bestämmer hur många % av attack damage kommer igenom till hp.
     {
-        return generator.Next(10, 100);
+        return generator.Next(1, 10);
     }
 
     private bool isAlive = true;
@@ -31,6 +31,19 @@ public class Fighter
         }
     }
 
+    public string FighterName(Fighter target)
+    {
+        while (name == "unchosen" || name == "")
+        {
+            name = Console.ReadLine();
+            if (name == "unchosen" || name == "")
+            {
+                Console.Clear();
+                Console.WriteLine("Please type a valid name.");
+            }
+        }
+        return name;
+    }
 
 
 }

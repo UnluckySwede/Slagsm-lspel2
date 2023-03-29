@@ -4,10 +4,10 @@ public class Sword : Weapon
 {
     public Sword()
     {
-        minAccuracy = 85;
-        maxAccuracy = 100;
+        minAccuracy = 8;
+        maxAccuracy = 10;
         name = "sword";
-        damage = 20;
+        damage = 2;
     }
 
 }

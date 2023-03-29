@@ -25,6 +25,7 @@ public class Enemy : Fighter
             {
                 hp = 100;
                 Console.WriteLine("Your enemy shall have 100 hp.");
+
             }
             else if (difficulty == "3")
             {
@@ -38,6 +39,7 @@ public class Enemy : Fighter
             }
             if (difficulty != "1" && difficulty != "2" && difficulty != "3" && difficulty != "4")
             {
+                Console.Clear();
                 Console.WriteLine("Please type 1, 2, 3 or 4 and choose a difficulty.");
                 difficulty = "placeholder";
             }

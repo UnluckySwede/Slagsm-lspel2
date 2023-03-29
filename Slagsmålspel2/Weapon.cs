@@ -19,18 +19,18 @@ public class Weapon
         int agi = target.Agility();
         if (acc <= agi)
         {
-            damage = 0;
             return 0;
         }
         else
         {
-            damage = damage * (acc / 100);
-            return damage;
+            int damage3 = damage * acc;
+            return damage3;
         }
     }
 
     public static Weapon Choice()
     {
+        Console.Clear();
         Console.WriteLine("Choose your weapon");
         Console.WriteLine("1. Sword");
         Console.WriteLine("2. Pike");
