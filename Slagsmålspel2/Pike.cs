@@ -7,6 +7,6 @@ public class Pike : Weapon
         name = "pike";
         minAccuracy = 6;
         maxAccuracy = 10;
-        damage = 2;
+        Damage = 2;
     }
 }

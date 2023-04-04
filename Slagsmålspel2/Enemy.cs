@@ -2,7 +2,8 @@ using System;
 
 public class Enemy : Fighter
 {
-
+    public int Weapon { get; set; }
+    private Random generator = new Random();
 
     public void Difficulty() // metod som selectar vilken mängd hp som fienden ges.
     {
@@ -44,6 +45,26 @@ public class Enemy : Fighter
                 difficulty = "placeholder";
             }
 
+        }
+    }
+    // private static int EnemyWeapon()
+    // {
+    //     return generator.Next(1, 4);
+    // }
+    public Weapon EnemyWeaponChoice()
+    {
+        int Weapon = generator.Next(1, 5);
+        Weapon choice;
+        switch (Weapon)
+        {
+            case (0):
+                return new Axe();
+            case (1):
+                return new Sword();
+            case (2):
+                return new Fists();
+            default:
+                return new Pike();
         }
     }
 }

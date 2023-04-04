@@ -2,28 +2,46 @@ using System;
 
 public class Weapon
 {
-    public int damage { get; set; }
+    public int Damage { get; set; }
     public int minAccuracy { get; set; }
     public int maxAccuracy { get; set; }
     public string name { get; set; }
+    public int Accuracy { get; set; }
+
     private Random generator = new Random();
 
     public int AttackAcc()
     {
-        return generator.Next(minAccuracy, maxAccuracy);
+        Accuracy = generator.Next(minAccuracy, maxAccuracy);
     }
 
     public int AttackDmg(Enemy target)
     {
-        int acc = AttackAcc();
-        int agi = target.Agility();
-        if (acc <= agi)
+        Accuracy = AttackAcc();
+        target.RandomizeAgility();
+        int Agility = target.Agility;
+        if (Accuracy <= Agility)
         {
             return 0;
         }
         else
         {
-            int damage3 = damage * acc;
+            int damage3 = Damage * Accuracy;
+            return damage3;
+        }
+    }
+    public int AttackDmg(Fighter target)
+    {
+        Accuracy = AttackAcc();
+        target.RandomizeAgility();
+        int Agility = target.Agility;
+        if (Accuracy <= Agility)
+        {
+            return 0;
+        }
+        else
+        {
+            int damage3 = Damage * Accuracy;
             return damage3;
         }
     }

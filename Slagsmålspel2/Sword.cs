@@ -7,7 +7,7 @@ public class Sword : Weapon
         minAccuracy = 8;
         maxAccuracy = 10;
         name = "sword";
-        damage = 2;
+        Damage = 2;
     }
 
 }

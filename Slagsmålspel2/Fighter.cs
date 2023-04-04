@@ -11,9 +11,11 @@ public class Fighter
 
     private Random generator = new Random();
 
-    public int Agility() // int som bestämmer hur många % av attack damage kommer igenom till hp.
+    public int Agility { get; set; }
+
+    public void RandomizeAgility() // int som bestämmer hur många % av attack damage kommer igenom till hp.
     {
-        return generator.Next(1, 10);
+        Agility = generator.Next(1, 10);
     }
 
     private bool isAlive = true;
