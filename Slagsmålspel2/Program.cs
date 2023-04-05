@@ -13,7 +13,7 @@ while (e1.GetAlive() && f1.GetAlive())
     e1.Difficulty();
     Console.Clear();
     f1.weapon = Weapon.Choice();
-    e1.weapon = e1.EnemyWeaponChoice();
+    e1.EnemyWeapon = Enemy.EnemyWeaponChoice();
 
     while (e1.hp > 0)
     {
@@ -42,7 +42,7 @@ while (e1.GetAlive() && f1.GetAlive())
         Console.WriteLine($"Weapon:{f1.weapon.name}");
         Console.WriteLine($"Enemy agility:{e1.Agility}");
         Console.WriteLine($"Weapon accuracy:{f1.weapon.Accuracy}");
-        Console.WriteLine($"Enemy weapon:{e1.weapon}");
+        Console.WriteLine($"Enemy weapon:{e1.EnemyWeapon}");
         if (strike == 0 && attack == true)
         {
             Console.WriteLine("Attack missed!");

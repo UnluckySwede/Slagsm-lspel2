@@ -12,7 +12,7 @@ public class Weapon
 
     public int AttackAcc()
     {
-        Accuracy = generator.Next(minAccuracy, maxAccuracy);
+        return generator.Next(minAccuracy, maxAccuracy);
     }
 
     public int AttackDmg(Enemy target)

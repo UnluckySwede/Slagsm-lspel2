@@ -9,6 +9,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
+      "requireExactSource": false,
       // If you have changed target frameworks, make sure to update the program path.
       "program": "${workspaceFolder}/Slagsmålspel2/bin/Debug/net6.0/Slagsmålspel2.dll",
       "args": [],
