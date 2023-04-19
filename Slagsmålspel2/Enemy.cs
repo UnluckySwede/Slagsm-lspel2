@@ -51,7 +51,7 @@ public class Enemy : Fighter
     // {
     //     return generator.Next(1, 4);
     // }
-    public static Weapon EnemyWeaponChoice()
+    public static Weapon EnemyWeaponChoice() //Slumpmässigt väljer ett vapen för enemy
     {
         Random generator = new Random();
         int Weapon = generator.Next(0, 3);

@@ -2,7 +2,7 @@
 Enemy e1 = new Enemy();
 f1.weapon = new Weapon();
 f1.hp = 100;
-while (e1.GetAlive() && f1.GetAlive())
+while (e1.GetAlive() && f1.GetAlive()) //En while loop som fortsätter så länge både enemy och fighter är vid liv
 {
     Console.Clear();
     Console.WriteLine("Choose a name for your fighter!");
@@ -15,7 +15,7 @@ while (e1.GetAlive() && f1.GetAlive())
     f1.weapon = Weapon.Choice();
     e1.EnemyWeapon = Enemy.EnemyWeaponChoice();
 
-    while (e1.hp > 0)
+    while (e1.hp > 0) //En while loop som kollar om Enemy hp är mer än 0 och då forsätter eller stänger ner programmet
     {
         Console.Clear();
         int strike = 0;
@@ -39,7 +39,7 @@ while (e1.GetAlive() && f1.GetAlive())
         // string accuracy = f1.weapon.AttackAcc;
         // int.TryParse(f1.weapon.AttackAcc, out accuracy);
         Console.WriteLine($"Enemy hp remaining:{e1.hp}");
-        Console.WriteLine($"Weapon:{f1.weapon.name}");
+        Console.WriteLine($"Weapon:{f1.weapon.Name}");
         Console.WriteLine($"Enemy agility:{e1.Agility}");
         Console.WriteLine($"Weapon accuracy:{f1.weapon.Accuracy}");
         Console.WriteLine($"Enemy weapon:{e1.EnemyWeapon}");

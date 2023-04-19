@@ -2,11 +2,11 @@ using System;
 
 public class Axe : Weapon
 {
-    public Axe()
+    public Axe()  //Ger värdena till weapon om detta är vapnet fighter eller enemy väljer
     {
-        name = "axe";
-        minAccuracy = 5;
-        maxAccuracy = 10;
+        Name = "axe";
+        MinAccuracy = 5;
+        MaxAccuracy = 10;
         Damage = 3;
     }
 }

@@ -2,11 +2,11 @@ using System;
 
 public class Sword : Weapon
 {
-    public Sword()
+    public Sword() //Ger värdena till weapon om detta är vapnet fighter eller enemy väljer
     {
-        minAccuracy = 8;
-        maxAccuracy = 10;
-        name = "sword";
+        MinAccuracy = 8;
+        MaxAccuracy = 10;
+        Name = "sword";
         Damage = 2;
     }
 

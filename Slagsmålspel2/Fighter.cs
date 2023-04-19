@@ -20,12 +20,12 @@ public class Fighter
 
     private bool isAlive = true;
 
-    public bool GetAlive()
+    public bool GetAlive() //Returnerar om fighter är vid liv eller inte
     {
         return isAlive;
     }
 
-    public void Death()
+    public void Death() //Kollar om fighter är vid liv eller inte
     {
         if (hp <= 0)
         {
@@ -33,7 +33,7 @@ public class Fighter
         }
     }
 
-    public string FighterName(Fighter target)
+    public string FighterName(Fighter target) //Ber om ett namn från spelaren som kommer då bli fighters namn
     {
         while (name == "unchosen" || name == "")
         {

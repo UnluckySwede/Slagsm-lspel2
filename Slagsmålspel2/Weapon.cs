@@ -3,19 +3,19 @@ using System;
 public class Weapon
 {
     public int Damage { get; set; }
-    public int minAccuracy { get; set; }
-    public int maxAccuracy { get; set; }
-    public string name { get; set; }
+    public int MinAccuracy { get; set; }
+    public int MaxAccuracy { get; set; }
+    public string Name { get; set; }
     public int Accuracy { get; set; }
 
     private Random generator = new Random();
 
-    public int AttackAcc()
+    public int AttackAcc() //Giver en random accuracy som kan bli påverkad beroende på vapnet man valt
     {
-        return generator.Next(minAccuracy, maxAccuracy);
+        return generator.Next(MinAccuracy, MaxAccuracy);
     }
 
-    public int AttackDmg(Enemy target)
+    public int AttackDmg(Enemy target) //Kalkylerar om fighter attack accuracy är högre än enemys agility och hur mycket skada som kommer igenom
     {
         Accuracy = AttackAcc();
         target.RandomizeAgility();
@@ -30,7 +30,7 @@ public class Weapon
             return damage3;
         }
     }
-    public int AttackDmg(Fighter target)
+    public int AttackDmg(Fighter target) //Kalkylerar om enemy attack accuracy är högre än fighter agility och hur mycket skada som kommer igenom (Jag har ännu ej gjort så att denna aktiverar)
     {
         Accuracy = AttackAcc();
         target.RandomizeAgility();
@@ -46,7 +46,7 @@ public class Weapon
         }
     }
 
-    public static Weapon Choice()
+    public static Weapon Choice() //Använder en switch för att kolla vilket vapen som fighter väljer
     {
         Console.Clear();
         Console.WriteLine("Choose your weapon");
