@@ -10,12 +10,12 @@ public class Weapon
 
     private Random generator = new Random();
 
-    public int AttackAcc() //Giver en random accuracy som kan bli påverkad beroende på vapnet man valt
+    private int AttackAcc() //Giver en random accuracy som kan bli påverkad beroende på vapnet man valt
     {
         return generator.Next(MinAccuracy, MaxAccuracy);
     }
 
-    public int AttackDmg(Enemy target) //Kalkylerar om fighter attack accuracy är högre än enemys agility och hur mycket skada som kommer igenom
+    private int AttackDmg(Enemy target) //Kalkylerar om fighter attack accuracy är högre än enemys agility och hur mycket skada som kommer igenom
     {
         Accuracy = AttackAcc();
         target.RandomizeAgility();
